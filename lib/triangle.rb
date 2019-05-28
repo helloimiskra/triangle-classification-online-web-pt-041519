@@ -18,6 +18,7 @@ class Triangle
       #@length_one + @length_two > @length_three || @length_one + @length_three > @length_two || @length_two + @length_three > @length_one
       return :scalene
     end
+  end
 
   class TriangleError < StandardError
     end
