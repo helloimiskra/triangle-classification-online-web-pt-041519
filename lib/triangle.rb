@@ -6,8 +6,9 @@ class Triangle
     @length_two = length_two
     @length_three = length_three
   end
-
- def illegal?
+#initalizes with three lengths
+ def illegal? #defines what is illegal according to triangle inequality
+   #there are two ways: 1. one length = 0, 2. sum of two lengths is less than the other
    illegal_one = @length_one <= 0 || @length_two <= 0 || @length_three <= 0
    illegal_two = @length_one + @length_two <= @length_three || @length_one + @length_three <= @length_two || @length_two + @length_three <= @length_one
 
@@ -20,19 +21,14 @@ class Triangle
    end
  end
 
-  def kind
-    if self.illegal? == true
+  def kind #defines what kind of triangle it is
+    if self.illegal? == true #first need to determine if triangle is illegal or not, if yes raise error
       raise TriangleError
-    # if @length_one <= 0 || @length_two <= 0 || @length_three <= 0
-    #   raise TriangleError
-    # # elsif @length_one + @length_two > @length_three || @length_one + @length_three > @length_two || @length_two + @length_three > @length_one
-    # #   raise TriangleError
-    elsif @length_one == @length_two && @length_two == @length_three
+    elsif @length_one == @length_two && @length_two == @length_three #then determine what kind of triangle
       return :equilateral
     elsif @length_one == @length_two || @length_one == @length_three || @length_two == @length_three
       return :isosceles
     else
-      #@length_one + @length_two > @length_three || @length_one + @length_three > @length_two || @length_two + @length_three > @length_one
       return :scalene
     end
   end
@@ -43,8 +39,7 @@ class Triangle
 end
 
 
-  # write code here
- #equalateral triangle - all lengths are same
-    #isosceles - 2 lengths are same, 1 different
-    #scalene - lengths are all different, sum of two lengths always exceeds 3rd
-    #each length is bigger than 0
+#equalateral triangle - all lengths are same
+#isosceles - 2 lengths are same, 1 different
+#scalene - lengths are all different, sum of two lengths always exceeds 3rd
+#each length is bigger than 0
