@@ -9,7 +9,7 @@ class Triangle
 
  def illegal?
    illegal_one = @length_one <= 0 || @length_two <= 0 || @length_three <= 0
-   illegal_two = @length_one + @length_two =< @length_three || @length_one + @length_three =< @length_two || @length_two + @length_three =< @length_one
+   illegal_two = @length_one + @length_two <= @length_three || @length_one + @length_three <= @length_two || @length_two + @length_three <= @length_one
 
    if illegal_one == true
      true
