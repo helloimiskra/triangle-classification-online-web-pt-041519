@@ -9,7 +9,7 @@ class Triangle
 
   end
 
-  def initialize
+
   # write code here
  #equalateral triangle - all lengths are same
     #isosceles - 2 lengths are same, 1 different
