@@ -30,6 +30,3 @@ end
     #isosceles - 2 lengths are same, 1 different
     #scalene - lengths are all different, sum of two lengths always exceeds 3rd
     #each length is bigger than 0
-
-
-
